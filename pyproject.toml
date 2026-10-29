@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "financeproject"
+version = "0.1.0"
+dependencies = [
+	"plotly",
+    "numpy",
+    "pandas",
+    "kaleido",
+    "nbformat",
+	"alpaca-py",
+	"statsmodels",
+    "jinja2",
+    "nbconvert",
+    "ipykernel",
+    "pytest"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.vscode/
+.ipynb_checkpoints/
+.env
+portfolio_transactions_log.csv
+output/*.html
+config/alpaca_config.json
+*.egg-info/
+build/
+# Publish-only exclusions
+data/F-F_*.csv
