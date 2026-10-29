@@ -4,6 +4,7 @@ from analysis.regression import regress_returns
 from analysis.metrics import calc_metrics
 from common.constants import get_ff3, get_portfolio_daily_values_and_returns, get_mom_faily
 from custom_portfolio.plot_returns import plot_returns_vs_spy
+from custom_portfolio.transactions import display_portfolio_transactions
 
 def filter_data_by_date(df_ff3_arg, df_returns_arg):
     df_ff3 = df_ff3_arg.copy()
@@ -29,6 +30,7 @@ def compute_excess_return(df_merged):
     return (df_merged["dlyret"] - df_merged["RF"]).rename("portRf")
 
 def run_analysis_pipeline():
+    display_portfolio_transactions()
     plot_returns_vs_spy()
     df_merged = create_excess_return_and_filter_dates()
     regress_returns(df_merged)
